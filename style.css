@@ -1,0 +1,19 @@
+.header{
+    text-align: center;
+    background-color: bisque;
+}
+.card_container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.card_container>.card{
+    height: 200px;
+    width: 200px;
+    font-size: 1.3em;
+    background-color: burlywood;
+    text-align: center;
+}
+button.card{
+    border: 0;
+}
