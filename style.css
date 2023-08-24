@@ -78,3 +78,7 @@ body{
 .addBtn:active{
     transform: scale(.98);
 }
+.newBookDialog{
+    padding: 0;
+    border: 0;
+}
