@@ -64,13 +64,15 @@ body{
     height: 300px;
     width: 70%; 
     font-size: 1.3rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.192);
     background-color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.card>h3,.newBookDialog>div{
+.card>h3{
     font-size: 2rem;
     font-weight: 500;
 }
@@ -90,25 +92,34 @@ body{
 }
 .newBookDialog{
     border: 0;
-    padding: 1%;
-    width: max(200px,20%);
-    height: 300px;
+    padding: 1.5%;
+    width: max(100px,17%);
+    height: 350px;
     font-size: 1.3rem;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+}
+.newBookDialog>div{
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 .newBookDialog>form>input{
     border: 0;
+    border-radius: 8px;
     width: 90%;
-    padding: 2%; 
+    padding: 4%; 
     font-size: 1.3rem;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .newBookDialog>form>div{
     margin: 8% 0% 8% 0;
 }
+.newBookDialog::backdrop{
+    background-color: rgba(73, 73, 73, 0.459);
+}
 .removeBtn{
     width: 90%;
-    padding: 2%;
+    padding: 5%;
     background-color: rgba(255, 58, 58, 0.5);
     transition: .3s;
     border-radius: 10px;
@@ -119,8 +130,8 @@ body{
     transform: scale(.98);
 }
 .submitBtn{
-    width: 90%;
-    padding: 2%;
+    width: 100%;
+    padding: 5%;
     background-color: rgba(75, 218, 47, 0.50);
     transition: .3s;
     border-radius: 10px;
