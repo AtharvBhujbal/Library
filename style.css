@@ -44,9 +44,12 @@ table {
 }
 
 /* main css */
+:root{
+    font-family: 'ADLaM Display', cursive;
+}
 body{
     text-align: center;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(240, 240, 240);
 }
 .header{
     background-color:white;
@@ -59,6 +62,7 @@ body{
     padding: 2% 5%;
     row-gap: min(100px,5%);
     justify-items: center;
+    height: 100%;
 }
 .card{
     height: 300px;
@@ -94,20 +98,22 @@ body{
     border: 0;
     padding: 1.5%;
     width: max(100px,17%);
-    height: 350px;
+    height: 360px;
     font-size: 1.3rem;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
+    transition: transform 0.3s ease-in-out;
 }
 .newBookDialog>div{
     font-size: 1.5rem;
     font-weight: 900;
 }
 .newBookDialog>form>input{
+    font-family: 'ADLaM Display', cursive;
     border: 0;
     border-radius: 8px;
     width: 90%;
-    padding: 4%; 
+    padding: 3%; 
     font-size: 1.3rem;
     margin-top: 10%;
 }
@@ -139,4 +145,24 @@ body{
 .submitBtn:hover{
     background-color: rgba(75, 218, 47, 0.96);
     transform: scale(.98);
+}
+img{
+    transition: transform 0.3s ease-in-out;
+}
+img:hover{
+    transform: scale(1.2);
+}
+.footer a img{
+    width: 25px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 98%;
+    padding: 0.5%;
 }
