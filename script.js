@@ -11,20 +11,28 @@ function Book(title,author,pages,read){
     this.author=author;
     this.pages=pages;
     this.read=read;
-    this.info=function(){
-        return `${this.title} by ${this.author} with ${this.pages} pages, ${this.read ? 'read':'not read'}`;
-    }
 };
 function toAddBook(){
     newBookDialog.showModal();
 }
 function toDisplayBook(){
     cardContainer.innerHTML = ""; 
-    myLibrary.forEach(book => {
+    myLibrary.forEach((book,index) => {
         const card=document.createElement('div');
         card.classList.add('card');
-        card.innerHTML=`<h3>${book.title}</h3> <p>Author: ${book.author}</p> <p>Pages: ${book.pages}</p> <p>Status: ${book.read ? 'Read' : 'Not read'}</p>`;
+        card.innerHTML=`
+        <h3>${book.title}</h3> 
+        <p>Author: ${book.author}</p> 
+        <p>Pages: ${book.pages}</p> 
+        <p>Status: ${book.read ? 'Read' : 'Not read'}</p>
+        <button class="removeBtn" data-index='${index}'>Remove</button>`;
         cardContainer.appendChild(card);
+
+        const removeBtn=document.querySelectorAll('.removeBtn');
+        removeBtn.forEach(button=>{
+            button.addEventListener('click',toDeleteCard);
+        })
+
     });
 }
 submitBtn.addEventListener('click',(event)=>{
@@ -43,3 +51,8 @@ newBookDialog.addEventListener('click', (event) => {
         newBookDialog.close();
     }
 });
+function toDeleteCard(event){
+    const index=event.target.getAttribute('data-index');
+    myLibrary.splice(index,1);
+    toDisplayBook();
+}
