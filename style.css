@@ -70,7 +70,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.card>h3{
+.card>h3,.newBookDialog>div{
     font-size: 2rem;
     font-weight: 500;
 }
@@ -90,6 +90,21 @@ body{
 }
 .newBookDialog{
     border: 0;
+    padding: 1%;
+    width: max(200px,20%);
+    height: 300px;
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+.newBookDialog>form>input{
+    border: 0;
+    width: 90%;
+    padding: 2%; 
+    font-size: 1.3rem;
+    margin-top: 5%;
+}
+.newBookDialog>form>div{
+    margin: 8% 0% 8% 0;
 }
 .removeBtn{
     width: 90%;
@@ -101,4 +116,16 @@ body{
 }
 .removeBtn:hover{
     background-color: rgba(255, 58, 58, 0.96);
+    transform: scale(.98);
+}
+.submitBtn{
+    width: 90%;
+    padding: 2%;
+    background-color: rgba(75, 218, 47, 0.50);
+    transition: .3s;
+    border-radius: 10px;
+}
+.submitBtn:hover{
+    background-color: rgba(75, 218, 47, 0.96);
+    transform: scale(.98);
 }
